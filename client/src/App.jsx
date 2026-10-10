@@ -3,7 +3,7 @@ import DecisionMap from './components/DecisionMap';
 import DecisionJournal from './components/DecisionJournal';
 import ExportModal from './components/ExportModal';
 
-const API_BASE = 'http://127.0.0.1:5000/api';
+const API_BASE = import.meta.env.VITE_API_BASE_URL || 'https://before-you-act.onrender.com/api';
 
 export default function App() {
   const [view, setView] = useState('landing'); // 'landing' | 'intake' | 'dashboard'
